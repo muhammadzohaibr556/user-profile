@@ -1,0 +1,38 @@
+@media (prefers-reduced-motion: reduce){
+    .form input{
+        -webkit-transition:none;
+        transition:none
+    }
+}
+.form input::-ms-expand{
+    background-color:transparent;
+    border:0
+}
+.form input:focus{
+    color:#495057;
+    background-color:#fff;
+    border-color:#98c2f2;
+    outline:0;
+    -webkit-box-shadow:0 0 0 0.2rem rgba(39,128,227,0.25);
+    box-shadow:0 0 0 0.2rem rgba(39,128,227,0.25)
+}
+.form input::-webkit-input-placeholder{
+    color:#868e96;
+    opacity:1
+}
+.form input::-ms-input-placeholder{
+    color:#868e96;
+    opacity:1
+}
+.form input::placeholder{
+    color:#868e96;
+    opacity:1
+}
+.form input:disabled,.form input[readonly]{
+    background-color:#e9ecef;
+    opacity:1
+}
+select.form input:focus::-ms-value{
+    color:#495057;
+    background-color:#fff
+}

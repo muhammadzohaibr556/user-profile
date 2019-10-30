@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <h3 class="text-center">User Information</h3>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>First Name</th>
+                <td>{{user.first_name}}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{user.last_name}}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{user.username}}</td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td>{{user.birth_date}}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{user.gender}}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{user.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% else %}
+    <div class="text-center">
+        <h5>You are not logged in</h5>
+        <p>Nothing to display</p>
+    </div>
+    {% endif %} 
+{% endblock %}
